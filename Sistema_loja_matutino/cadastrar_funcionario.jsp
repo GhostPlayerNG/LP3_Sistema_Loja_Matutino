@@ -1,0 +1,120 @@
+<%@ page contentType="text/html" language="java" import="java.sql.*"%>  
+ <jsp:useBean id="con" class="conexao_funcionario.Conexao_funcionario"/>  
+ <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">  
+ <html>  
+ <head>  
+ <title>Cadastrar Funcionário</title>  
+ <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">  
+ </head>
+ <body>  
+ <form name="form1" method="post" action="funcionario.jsp">  
+	<p><strong>Tabela Funcionário </strong></p>  
+	<table border=1 cellspacing=0 cellpadding=0 >  
+		<tr>  
+			<td width=50><strong>Código</strong></td>      
+			<td width=50><strong>Nome</strong></td>      
+			<td width=50><strong>Endereco</strong></td> 
+			<td width=50><strong>Numero</strong></td> 
+			<td width=50><strong>Complemento</strong></td> 
+			<td width=50><strong>Bairro</strong></td>
+			<td width=50><strong>Cidade</strong></td>
+			<td width=50><strong>UF</strong></td> 
+			<td width=50><strong>CNPJ/CPF</strong></td> 
+			<td width=50><strong>RG/IE</strong></td> 
+			<td width=50><strong>Sexo</strong></td> 
+			<td width=50><strong>Nascimento</strong></td> 
+			<td width=50><strong>Telefone</strong></td> 
+			<td width=50><strong>Celular</strong></td> 
+			<td width=50><strong>Email</strong></td> 
+			<td width=50><strong>Salario</strong></td> 
+		</tr>   
+		<%      
+		try {  
+		   con.setfun_codigo(Integer.parseInt(request.getParameter("fun_codigoField")));  
+		   con.setfun_nome(request.getParameter("fun_nomeField"));  
+		   con.setfun_endereco(request.getParameter("fun_enderecoField"));  
+		   con.setfun_numero(request.getParameter("fun_numeroField"));   
+		   con.setfun_complemento(Integer.parseInt("fun_complementoField"));  
+		   con.setfun_bairro(request.getParameter("fun_bairroField")); 
+		   con.setfun_cidade(request.getParameter("fun_cidadeField")); 
+		   con.setfun_uf(request.getParameter("fun_ufField")); 
+		   con.setfun_cnpjcpf(request.getParameter("fun_cnpjcpfField")); 
+		   con.setfun_rgie(request.getParameter("fun_rgieField")); 
+		   con.setfun_sexo(request.getParameter("fun_sexoField")); 
+		   con.setfun_nascimento(request.getParameter("fun_nascimentoField")); 
+		   con.setfun_telefone(request.getParameter("fun_telefoneField")); 
+		   con.setfun_celular(request.getParameter("fun_celularField")); 
+		   con.setfun_email(request.getParameter("fun_emailField")); 
+		   con.setfun_salario(request.getParameter("fun_salarioField")); 
+		   con.inserirDados();             
+		   con.setConsulta();  
+		   ResultSet temp = con.getResultado();  
+		   temp.next();  
+		   if(request.getParameter("fun_codigoField").equals(temp.getString("fun_codigo")))  
+			  response.sendRedirect("http://localhost:8084/sistema_loja_matutino/funcionario.jsp?status=Registro já existente");  
+		   do{  
+		   %>  
+			<tr>  
+				<td width=50>  
+					<%out.print(temp.getString("fun_codigo"));%>  
+				</td>  
+				<td width=50>  
+					<%out.print(temp.getString("fun_nome"));%>  
+				</td>  
+				<td width=50>  
+					<%out.print(temp.getString("fun_endereco"));%> 
+				</td>	
+				<td width=50>  
+					<%out.print(temp.getString("fun_numero"));%>  
+				</td>
+				<td width=50>  
+					<%out.print(temp.getString("fun_complemento"));%>  
+				</td>  
+				<td width=50>  
+					<%out.print(temp.getString("fun_bairro"));%>  
+				</td>  
+				<td width=50>  
+					<%out.print(temp.getString("fun_cidade"));%>  
+				</td>
+				<td width=50>  
+					<%out.print(temp.getString("fun_uf"));%>  
+				</td>
+				<td width=50>  
+					<%out.print(temp.getString("fun_cnpjcpf"));%>  
+				</td>  
+				<td width=50>  
+					<%out.print(temp.getString("fun_rgie"));%>  
+				</td>  
+				<td width=50>  
+					<%out.print(temp.getString("fun_sexo"));%>  
+				</td>  
+				<td width=50>  
+					<%out.print(temp.getString("fun_nascimento"));%>  
+				</td>  
+				<td width=50>  
+					<%out.print(temp.getString("fun_telefone"));%>  
+				</td>  
+				<td width=50>  
+					<%out.print(temp.getString("fun_celular"));%>  
+				</td>  
+				<td width=50>  
+					<%out.print(temp.getString("fun_email"));%>  
+				</td>  
+				<td width=50>  
+					<%out.print(temp.getString("fun_salario"));%>  
+				</td>  
+			</tr>  
+			<%}while (temp.next());       
+		}catch (Exception e) {  
+			e.printStackTrace();  
+		}      
+		%>  
+	</table>  
+	<p></p>  
+	<p><input type="submit" name="Submit" value="voltar"></p>    
+	<p><strong>Status:  
+    <input name="statusField" disabled type="text" id="statusField" size="36" value="<%=request.getParameter("fun_codigoField")%> foi cadastrado com sucesso">  
+    </strong></p>  
+ </form>  
+ </body>  
+ </html> 
