@@ -6,7 +6,7 @@
 <script>     
 function enviar(par){          
     if (par == 'cadastrar'){          
-        if (document.cadastro.com_codigoField.value == ''){  
+        if (document.cadastro.ven_codigoField.value == ''){  
             document.cadastro.statusField.value = 'Preencha o campo codigo';  
         }else if (document.cadastro.fun_codigoField.value == ''){  
             document.cadastro.statusField.value = 'Preencha o campo codigo funcionario';  
@@ -14,25 +14,25 @@ function enviar(par){
             document.cadastro.statusField.value = 'Preencha o campo codigo tipo pagamento';  
         }else if (document.cadastro.nf_codigoField.value == ''){  
             document.cadastro.statusField.value = 'Preencha o campo codigo nota fiscal';  
-        }else if (document.cadastro.com_datavendaField.value == ''){  
+        }else if (document.cadastro.ven_datavendaField.value == ''){  
             document.cadastro.statusField.value = 'Preencha o campo data venda';  
-        }else if (document.cadastro.com_valortotalField.value == ''){  
+        }else if (document.cadastro.ven_valortotalField.value == ''){  
             document.cadastro.statusField.value = 'Preencha o campo valor total';  
-        }else if (document.cadastro.com_observacoesField.value == ''){  
+        }else if (document.cadastro.ven_observacoesField.value == ''){  
             document.cadastro.statusField.value = 'Preencha o campo observacoes';  
         }else {  
             document.cadastro.action='cadastrar_vendas.jsp';  
             document.cadastro.submit();  
         }       
     } else if (par == 'consultar'){       
-        if (document.cadastro.com_codigoField.value == ''){ 
+        if (document.cadastro.ven_codigoField.value == ''){ 
             document.cadastro.statusField.value = 'Preencha o campo codigo';  
         }else {  
             document.cadastro.action='consultar_vendas.jsp';  
             document.cadastro.submit();  
         }       
     } else if (par == 'alterar'){       
-        if (document.cadastro.com_codigoField.value == ''){  
+        if (document.cadastro.ven_codigoField.value == ''){  
             document.cadastro.statusField.value = 'Preencha o campo codigo';  
         }else if (document.cadastro.fun_codigoField.value == ''){  
             document.cadastro.statusField.value = 'Preencha o campo codigo funcionario';  
@@ -40,18 +40,18 @@ function enviar(par){
             document.cadastro.statusField.value = 'Preencha o campo codigo tipo pagamento';  
         }else if (document.cadastro.nf_codigoField.value == ''){  
             document.cadastro.statusField.value = 'Preencha o campo codigo nota fiscal';  
-        }else if (document.cadastro.com_datavendaField.value == ''){  
+        }else if (document.cadastro.ven_datavendaField.value == ''){  
             document.cadastro.statusField.value = 'Preencha o campo data venda';  
-        }else if (document.cadastro.com_valortotalField.value == ''){  
+        }else if (document.cadastro.ven_valortotalField.value == ''){  
             document.cadastro.statusField.value = 'Preencha o campo valor total';  
-        }else if (document.cadastro.com_observacoesField.value == ''){  
+        }else if (document.cadastro.ven_observacoesField.value == ''){  
             document.cadastro.statusField.value = 'Preencha o campo observacoes';  
         }else { 
             document.cadastro.action='alterar_vendas.jsp';  
             document.cadastro.submit();  
         }  
     } else if (par == 'excluir'){       
-        if (document.cadastro.com_codigoField.value == ''){  
+        if (document.cadastro.ven_codigoField.value == ''){  
             document.cadastro.statusField.value = 'Preencha o campo codigo';  
         }else {  
             document.cadastro.action='excluir_vendas.jsp';  
@@ -73,13 +73,13 @@ function enviar(par){
 </style>  
 </head>      
 <%  
-String com_codigo = request.getParameter("com_codigo");  
+String ven_codigo = request.getParameter("ven_codigo");  
 String fun_codigo = request.getParameter("fun_codigo");
 String tpg_codigo = request.getParameter("tpg_codigo");  
 String nf_codigo = request.getParameter("nf_codigo"); 
-String com_datavenda = request.getParameter("com_datavenda");
-String com_valortotal = request.getParameter("com_valortotal"); 	
-String com_observacoes = request.getParameter("com_observacoes"); 
+String ven_datavenda = request.getParameter("ven_datavenda");
+String ven_valortotal = request.getParameter("ven_valortotal"); 	
+String ven_observacoes = request.getParameter("ven_observacoes"); 
 String status = request.getParameter("status");  
 %>       
 <body>  
@@ -91,7 +91,7 @@ String status = request.getParameter("status");
         </tr>  
         <tr>  
             <td height="" bgcolor="red"><p> <strong>Codigo: </strong>  
-                <input name="com_codigoField" type="text" id="com_codigoField" size="" value="<%=(com_codigo==null)?"":com_codigo%>"> </p>  
+                <input name="ven_codigoField" type="text" id="ven_codigoField" size="" value="<%=(ven_codigo==null)?"":ven_codigo%>"> </p>  
                 <p><strong>Codigo funcionario: </strong>        
                 <input name="fun_codigoField" type="text" id="fun_codigoField" size="" value="<%=(fun_codigo==null)?"":fun_codigo%>"> </p> 
                 <p><strong>Codigo tipo pagamento: </strong>  
@@ -99,11 +99,11 @@ String status = request.getParameter("status");
                 <p><strong>Codigo Nota Fiscal: </strong>        
                 <input name="nf_codigoField" type="text" id="nf_codigoField" size="" value="<%=(nf_codigo==null)?"":nf_codigo%>"> </p>
                 <p><strong>Data Venda: </strong>        
-                <input name="com_datavendaField" type="text" id="com_datavendaField" size="" value="<%=(com_datavenda==null)?"":com_datavenda%>"> </p>      
+                <input name="ven_datavendaField" type="text" id="ven_datavendaField" size="" value="<%=(ven_datavenda==null)?"":ven_datavenda%>"> </p>      
                 <p><strong>Valor Total: </strong>  
-                <input name="com_valortotalField" type="text" id="com_valortotalField" size="" value="<%=(com_valortotal==null)?"":com_valortotal%>"> </p> 
+                <input name="ven_valortotalField" type="text" id="ven_valortotalField" size="" value="<%=(ven_valortotal==null)?"":ven_valortotal%>"> </p> 
                 <p><strong>Observacoes: </strong>        
-                <input name="com_observacoesField" type="text" id="com_observacoesField" size="" value="<%=(com_observacoes==null)?"":com_observacoes%>"> </p>      					
+                <input name="ven_observacoesField" type="text" id="ven_observacoesField" size="" value="<%=(ven_observacoes==null)?"":ven_observacoes%>"> </p>      					
             </td>  
         </tr>  
         <tr>  

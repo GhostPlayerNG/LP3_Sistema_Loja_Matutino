@@ -21,18 +21,18 @@
 		</tr>   
 		<%      
 		try {  
-		   con.setcom_codigo(Integer.parseInt(request.getParameter("com_codigoField")));
-		   con.settpg_codigo(Integer.parseInt(request.getParameter("tpg_codigoField")));
-		   con.setfor_codigo(Integer.parseInt(request.getParameter("for_codigoField")));
-		   con.setnf_codigo(Integer.parseInt(request.getParameter("nf_codigoField")));
-		   con.setcom_datacompra(request.getParameter("com_datacompraField"));  
-		   con.setcom_valortotal(request.getParameter("com_valortotalField"));  
-		   con.setcom_observacoes(request.getParameter("com_observacoesField"));   
-		   con.inserirDados();             
-		   con.setConsulta();  
-		   ResultSet temp = con.getResultado();  
-		   temp.next();  
-		   if(request.getParameter("com_codigoField").equals(temp.getString("com_codigo")))  
+			con.setCom_codigo(Integer.parseInt(request.getParameter("com_codigoField")));
+			con.setTpg_codigo(Integer.parseInt(request.getParameter("tpg_codigoField")));
+			con.setFor_codigo(Integer.parseInt(request.getParameter("for_codigoField")));
+			con.setNf_codigo(Integer.parseInt(request.getParameter("nf_codigoField")));
+			con.setCom_datacompra(request.getParameter("com_datacompraField"));  
+			con.setCom_valortotal(request.getParameter("com_valortotalField"));  
+			con.setCom_observacoes(request.getParameter("com_observacoesField"));   
+		    con.inserirDados();             
+		    con.setConsulta();  
+		    ResultSet temp = con.getResultado();  
+		    temp.next();  
+		    if(request.getParameter("com_codigoField").equals(temp.getString("com_codigo")))  
 			  response.sendRedirect("http://localhost:8084/sistema_loja_matutino/compras.jsp?status=Registro já existente");  
 		   do{  
 		   %>  

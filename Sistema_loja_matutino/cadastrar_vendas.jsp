@@ -21,24 +21,24 @@
 		</tr>   
 		<%      
 		try {  
-		   con.setcom_codigo(Integer.parseInt(request.getParameter("com_codigoField")));
-		   con.setfun_codigo(Integer.parseInt(request.getParameter("fun_codigoField")));
-		   con.settpg_codigo(Integer.parseInt(request.getParameter("tpg_codigoField")));
-		   con.setnf_codigo(Integer.parseInt(request.getParameter("nf_codigoField")));
-		   con.setcom_datavenda(request.getParameter("com_datavendaField"));  
-		   con.setcom_valortotal(request.getParameter("com_valortotalField"));  
-		   con.setcom_observacoes(request.getParameter("com_observacoesField"));   
-		   con.inserirDados();             
-		   con.setConsulta();  
-		   ResultSet temp = con.getResultado();  
-		   temp.next();  
-		   if(request.getParameter("com_codigoField").equals(temp.getString("com_codigo")))  
+			con.setVen_codigo(Integer.parseInt(request.getParameter("ven_codigoField")));
+			con.setFun_codigo(Integer.parseInt(request.getParameter("fun_codigoField")));
+			con.setTpg_codigo(Integer.parseInt(request.getParameter("tpg_codigoField")));
+			con.setNf_codigo(Integer.parseInt(request.getParameter("nf_codigoField")));
+			con.setVen_datavenda(request.getParameter("ven_datavendaField"));  
+			con.setVen_valortotal(request.getParameter("ven_valortotalField"));  
+			con.setVen_observacoes(request.getParameter("ven_observacoesField"));   
+		  	con.inserirDados();             
+		    con.setConsulta();  
+		    ResultSet temp = con.getResultado();  
+		    temp.next();  
+		    if(request.getParameter("ven_codigoField").equals(temp.getString("ven_codigo")))  
 			  response.sendRedirect("http://localhost:8084/sistema_loja_matutino/vendas.jsp?status=Registro já existente");  
-		   do{  
-		   %>  
+		    do{  
+		    %>  
 			<tr>  
 				<td width=50>  
-					<%out.print(temp.getString("com_codigo"));%>  
+					<%out.print(temp.getString("ven_codigo"));%>  
 				</td> 
 				<td width=50>  
 					<%out.print(temp.getString("fun_codigo"));%>  
@@ -50,13 +50,13 @@
 					<%out.print(temp.getString("nf_codigo"));%>  
 				</td>  
 				<td width=50>  
-					<%out.print(temp.getString("com_datavenda"));%>  
+					<%out.print(temp.getString("ven_datavenda"));%>  
 				</td>  
 				<td width=50>  
-					<%out.print(temp.getString("com_valortotal"));%> 
+					<%out.print(temp.getString("ven_valortotal"));%> 
 				</td>	
 				<td width=50>  
-					<%out.print(temp.getString("com_observacoes"));%>  
+					<%out.print(temp.getString("ven_observacoes"));%>  
 				</td>
 			</tr>  
 			<%}while (temp.next());       
@@ -68,7 +68,7 @@
 	<p></p>  
 	<p><input type="submit" name="Submit" value="voltar"></p>    
 	<p><strong>Status:  
-    <input name="statusField" disabled type="text" id="statusField" size="36" value="<%=request.getParameter("com_codigoField")%> foi cadastrado com sucesso">  
+    <input name="statusField" disabled type="text" id="statusField" size="36" value="<%=request.getParameter("ven_codigoField")%> foi cadastrado com sucesso">  
     </strong></p>  
  </form>  
  </body>  

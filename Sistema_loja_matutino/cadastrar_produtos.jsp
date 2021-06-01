@@ -22,22 +22,22 @@
 		</tr>   
 		<%      
 		try {  
-		   con.setpro_codigo(Integer.parseInt(request.getParameter("pro_codigoField")));  
-		   con.setpro_descricao(request.getParameter("pro_descricaoField")); 
-		   con.settpp_codigo(request.getParameter("tpp_codigoField"));
-		   con.setpro_precocusto(request.getParameter("pro_precocustoField"));
-		   con.setpro_prevenda(request.getParameter("pro_precovendaField"));
-		   con.setpro_estoque(request.getParameter("pro_estoqueField"));
-		   con.setpro_embalagem(request.getParameter("pro_embalagemField"));
-		   con.setpro_ipi(request.getParameter("pro_ipiField"));
-		   con.inserirDados();             
-		   con.setConsulta();  
-		   ResultSet temp = con.getResultado();  
-		   temp.next();  
-		   if(request.getParameter("pro_codigoField").equals(temp.getString("pro_codigo")))  
-			  response.sendRedirect("http://localhost:8084/sistema_loja_matutino/produtos.jsp?status=Registro já existente");  
-		   do{  
-		   %>  
+			con.setPro_codigo(Integer.parseInt(request.getParameter("pro_codigoField")));  
+		    con.setPro_descricao(request.getParameter("pro_descricaoField")); 
+		    con.setTpp_codigo(Integer.parseInt(request.getParameter("tpp_codigoField")));
+			con.setPro_precocusto(request.getParameter("pro_precocustoField"));
+		  	con.setPro_precovenda(request.getParameter("pro_precovendaField"));
+		    con.setPro_estoque(request.getParameter("pro_estoqueField"));
+		    con.setPro_embalagem(request.getParameter("pro_embalagemField"));
+		    con.setPro_ipi(request.getParameter("pro_ipiField"));
+		    con.inserirDados();             
+		    con.setConsulta();  
+		    ResultSet temp = con.getResultado();  
+		    temp.next();  
+		    if(request.getParameter("pro_codigoField").equals(temp.getString("pro_codigo")))  
+			  response.sendRedirect("http://localhost:8084/sistema_loja_matutino/produtos.jsp?status=Registro já 	existente");  
+		    do{  
+		    %>  
 			<tr>  
 				<td width=50>  
 					<%out.print(temp.getString("pro_codigo"));%>  

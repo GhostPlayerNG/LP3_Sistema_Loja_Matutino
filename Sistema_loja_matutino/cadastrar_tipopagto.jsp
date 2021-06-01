@@ -18,10 +18,10 @@
        </tr>   
        <%      
        try {  
-          con.settpg_codigo(Integer.parseInt(request.getParameter("tpg_codigoField")));  
-          con.settpg_descricao(request.getParameter("tpg_descricaoField"));  
-          con.settpg_qtde(request.getParameter("tpg_qtdeField"));  
-          con.settpg_ativo(request.getParameter("tpg_ativoField"));   
+        con.setTpg_codigo(Integer.parseInt(request.getParameter("tpg_codigoField")));  
+        con.setTpg_descricao(request.getParameter("tpg_descricaoField"));  
+        con.setTpg_qtde(request.getParameter("tpg_qtdeField"));  
+        con.setTpg_ativo(request.getParameter("tpg_ativoField"));    
           con.inserirDados();             
           con.setConsulta();  
           ResultSet temp = con.getResultado();  

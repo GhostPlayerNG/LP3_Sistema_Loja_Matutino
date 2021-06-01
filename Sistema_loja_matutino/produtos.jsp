@@ -91,7 +91,7 @@
 	<form name="cadastro" method="get">       
 		<table width="" border="">  
 			<tr>  
-				<td width="" height="" bgcolor="red"><p align="left" class="style"> Cadastro Tipo Produtos </p>  
+				<td width="" height="" bgcolor="red"><p align="left" class="style"> Cadastro Produtos </p>  
 				</td>  
 			</tr>  
 			<tr>  

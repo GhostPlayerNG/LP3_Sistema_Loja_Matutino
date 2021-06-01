@@ -20,20 +20,20 @@
 		</tr>   
 		<%      
 		try {  
-		   con.setcp_codigo(Integer.parseInt(request.getParameter("cp_codigoField")));  
-		   con.setcp_valorconta(request.getParameter("cp_valorcontaField"));  
-		   con.setcp_datavencimento(request.getParameter("cp_datavencimentoField"));  
-		   con.setcp_datapagamento(request.getParameter("cp_datapagamentoField"));   
-		   con.setnf_codigo(Integer.parseInt(request.getParameter("nf_codigoField")));  
-		   con.setcp_observacoes(request.getParameter("cp_observacoesField"));  
-		   con.inserirDados();             
-		   con.setConsulta();  
-		   ResultSet temp = con.getResultado();  
-		   temp.next();  
-		   if(request.getParameter("cp_codigoField").equals(temp.getString("cp_codigo")))  
+			con.setCp_codigo(Integer.parseInt(request.getParameter("cp_codigoField")));  
+			con.setCp_valorconta(request.getParameter("cp_valorcontaField"));  
+			con.setCp_datavencimento(request.getParameter("cp_datavencimentoField"));  
+			con.setCp_datapagamento(request.getParameter("cp_datapagamentoField"));   
+			con.setNf_codigo(Integer.parseInt(request.getParameter("nf_codigoField")));  
+			con.setCp_observacoes(request.getParameter("cp_observacoesField"));  
+		    con.inserirDados();             
+		    con.setConsulta();  
+		    ResultSet temp = con.getResultado();  
+		    temp.next();  
+		    if(request.getParameter("cp_codigoField").equals(temp.getString("cp_codigo")))  
 			  response.sendRedirect("http://localhost:8084/sistema_loja_matutino/contapagar.jsp?status=Registro já existente");  
-		   do{  
-		   %>  
+		    do{  
+		    %>  
 			<tr>  
 				<td width=50>  
 					<%out.print(temp.getString("cp_codigo"));%>  

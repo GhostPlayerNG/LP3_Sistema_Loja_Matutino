@@ -26,26 +26,26 @@
 		</tr>   
 		<%      
 		try {  
-		   con.setitc_codigo(Integer.parseInt(request.getParameter("itc_codigoField")));
-		   con.setcom_codigo(Integer.parseInt(request.getParameter("com_codigoField")));
-		   con.setpro_codigo(Integer.parseInt(request.getParameter("pro_codigoField")));
-		   con.settpp_codigo(Integer.parseInt(request.getParameter("tpp_codigoField")));
-		   con.setnf_codigo(Integer.parseInt(request.getParameter("nf_codigoField")));
-		   con.setfor_codigo(Integer.parseInt(request.getParameter("for_codigoField")));
-		   con.settpg_codigo(Integer.parseInt(request.getParameter("tpg_codigoField")));
-		   con.setitc_embalagem(request.getParameter("itc_embalagemField"));  
-		   con.setitc_qtde(request.getParameter("itc_qtdeField"));
-		   con.setitc_valorun(request.getParameter("itc_valorunField"));
-		   con.setitc_desc(request.getParameter("itc_descField"));   
-		   con.setitc_valortotal(request.getParameter("itc_valortotalField"));
-		   con.inserirDados();             
-		   con.setConsulta();  
-		   ResultSet temp = con.getResultado();  
-		   temp.next();  
-		   if(request.getParameter("itc_codigoField").equals(temp.getString("itc_codigo")))  
+			con.setItc_codigo(Integer.parseInt(request.getParameter("itc_codigoField")));
+			con.setCom_codigo(Integer.parseInt(request.getParameter("com_codigoField")));
+			con.setPro_codigo(Integer.parseInt(request.getParameter("pro_codigoField")));
+			con.setTpp_codigo(Integer.parseInt(request.getParameter("tpp_codigoField")));
+			con.setNf_codigo(Integer.parseInt(request.getParameter("nf_codigoField")));
+			con.setFor_codigo(Integer.parseInt(request.getParameter("for_codigoField")));
+			con.setTpg_codigo(Integer.parseInt(request.getParameter("tpg_codigoField")));
+			con.setItc_embalagem(request.getParameter("itc_embalagemField"));  
+			con.setItc_qtde(request.getParameter("itc_qtdeField"));
+			con.setItc_valorun(request.getParameter("itc_valorunField"));
+			con.setItc_desc(request.getParameter("itc_descField"));   
+			con.setItc_valortotal(request.getParameter("itc_valortotalField"));
+		    con.inserirDados();             
+		    con.setConsulta();  
+		    ResultSet temp = con.getResultado();  
+		    temp.next();  
+		    if(request.getParameter("itc_codigoField").equals(temp.getString("itc_codigo")))  
 			  response.sendRedirect("http://localhost:8084/sistema_loja_matutino/itenscompra.jsp?status=Registro já existente");  
-		   do{  
-		   %>  
+		    do{  
+		    %>  
 			<tr>  
 				<td width=50>  
 					<%out.print(temp.getString("itc_codigo"));%>  

@@ -10,12 +10,12 @@
 <form name="form1" method="post" action="itenscompra.jsp">   
 <jsp:setProperty name="con" property="itc_codigo" value='<%=Integer.parseInt(request.getParameter("itc_codigoField"))%>'/>  
 <jsp:setProperty name="con" property="com_codigo" value='<%=Integer.parseInt(request.getParameter("com_codigoField"))%>'/> 
-<jsp:setProperty name="con" property="com_codigo" value='<%=Integer.parseInt(request.getParameter("pro_codigoField"))%>'/> 
-<jsp:setProperty name="con" property="com_codigo" value='<%=Integer.parseInt(request.getParameter("tpp_codigoField"))%>'/>  
-<jsp:setProperty name="con" property="nf_codigo" value='<%=request.getParameter("nf_codigoField")%>'/>
-<jsp:setProperty name="con" property="for_codigo" value='<%=request.getParameter("for_codigoField")%>'/>    
-<jsp:setProperty name="con" property="tpg_codigo" value='<%=request.getParameter("tpg_codigoField")%>'/>  
-<jsp:setProperty name="con" property="itc_embalagem" value='<%=request.getParameter("itc_embalagemField"))%>'/>  
+<jsp:setProperty name="con" property="pro_codigo" value='<%=Integer.parseInt(request.getParameter("pro_codigoField"))%>'/> 
+<jsp:setProperty name="con" property="tpp_codigo" value='<%=Integer.parseInt(request.getParameter("tpp_codigoField"))%>'/>  
+<jsp:setProperty name="con" property="nf_codigo" value='<%=Integer.parseInt(request.getParameter("nf_codigoField"))%>'/>
+<jsp:setProperty name="con" property="for_codigo" value='<%=Integer.parseInt(request.getParameter("for_codigoField"))%>'/>    
+<jsp:setProperty name="con" property="tpg_codigo" value='<%=Integer.parseInt(request.getParameter("tpg_codigoField"))%>'/>  
+<jsp:setProperty name="con" property="itc_embalagem" value='<%=request.getParameter("itc_embalagemField")%>'/>  
 <jsp:setProperty name="con" property="itc_qtde" value='<%=request.getParameter("itc_qtdeField")%>'/>  
 <jsp:setProperty name="con" property="itc_valorun" value='<%=request.getParameter("itc_valorunField")%>'/>  
 <jsp:setProperty name="con" property="itc_desc" value='<%=request.getParameter("itc_descField")%>'/> 
@@ -25,7 +25,7 @@
 	<tr>  
 		<td width=50><strong>Código</strong></td>      
 		<td width=50><strong>Código Compras</strong></td> 
-		<td width=50><strong>Código Produto</strong></td> 
+		<td width=50><strong>Código Produtos</strong></td> 
 		<td width=50><strong>Código Tipo Produto</strong></td> 
 		<td width=50><strong>Código Nota Fiscal</strong></td> 
 		<td width=50><strong>Código Tipo Pagamento</strong></td>
@@ -49,6 +49,9 @@
 						</td>  
 						<td width=50>  
 							<%out.print(temp.getString("com_codigo"));%>  
+						</td>
+						<td width=50>  
+							<%out.print(temp.getString("pro_codigo"));%>  
 						</td>
 						<td width=50>  
 							<%out.print(temp.getString("tpp_codigo"));%>  

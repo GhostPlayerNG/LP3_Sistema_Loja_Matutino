@@ -10,7 +10,7 @@
 <form name="form1" method="post" action="notafiscal.jsp">   
 <jsp:setProperty name="con" property="nf_codigo" value='<%=Integer.parseInt(request.getParameter("nf_codigoField"))%>'/>  
 <jsp:setProperty name="con" property="nf_valornf" value='<%=request.getParameter("nf_valornfField")%>'/>  
-<jsp:setProperty name="con" property="nf_taxaimpostonf" value='<%=request.getParameter("nf_taxaimpostonfField"))%>'/>  
+<jsp:setProperty name="con" property="nf_taxaimpostonf" value='<%=request.getParameter("nf_taxaimpostonfField")%>'/>  
 <jsp:setProperty name="con" property="nf_valorimposto" value='<%=request.getParameter("nf_valorimpostoField")%>'/>  
 <p><strong>Tabela Nota Fiscal </strong></p>  
 <table border=1 cellspacing=0 cellpadding=0 >  

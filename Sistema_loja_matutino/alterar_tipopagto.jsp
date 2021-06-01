@@ -10,7 +10,7 @@
 <form name="form1" method="post" action="tipopagto.jsp">   
 <jsp:setProperty name="con" property="tpg_codigo" value='<%=Integer.parseInt(request.getParameter("tpg_codigoField"))%>'/>  
 <jsp:setProperty name="con" property="tpg_descricao" value='<%=request.getParameter("tpg_descricaoField")%>'/>  
-<jsp:setProperty name="con" property="tpg_qtde" value='<%=request.getParameter("tpg_qtdeField"))%>'/>  
+<jsp:setProperty name="con" property="tpg_qtde" value='<%=request.getParameter("tpg_qtdeField")%>'/>  
 <jsp:setProperty name="con" property="tpg_ativo" value='<%=request.getParameter("tpg_ativoField")%>'/>
   
 <p><strong>Tabela Tipo Pagamento </strong></p>  

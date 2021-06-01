@@ -10,27 +10,27 @@
 <form name="form1" method="post" action="notafiscal.jsp">  
    <p><strong>Tabela Nota Fiscal </strong></p>  
    <table border=1 cellspacing=0 cellpadding=0 >  
-       <tr>  
+        <tr>  
            <td width=50><strong>Código</strong></td>      
            <td width=50><strong>Valor</strong></td>      
            <td width=50><strong>Taxa</strong></td>  
            <td width=50><strong>Valor Imposto</strong></td> 
-       </tr>   
-       <%      
-       try {  
-          con.setNf_codigo(Integer.parseInt(request.getParameter("nf_codigoField")));  
-          con.setNf_valornf(request.getParameter("nf_valornfField"));  
-          con.setNf_taxaimpostonf(request.getParameter("nf_taxaimpostonfField"));  
-          con.setNf_valorimposto(request.getParameter("nf_valorimpostoField"));   
-          con.inserirDados();             
-          con.setConsulta();  
-          ResultSet temp = con.getResultado();  
-          temp.next();  
-          if(request.getParameter("nf_codigoField").equals(temp.getString("nf_codigo")))  
-             response.sendRedirect("http://localhost:8084/sistema_loja_matutino/notafiscal.jsp?status=Registro já existente");  
-          do{  
-          %>  
-           <tr>  
+        </tr>   
+        <%      
+        try {  
+            con.setNf_codigo(Integer.parseInt(request.getParameter("nf_codigoField")));  
+            con.setNf_valornf(request.getParameter("nf_valornfField"));  
+            con.setNf_taxaimpostonf(request.getParameter("nf_taxaimpostonfField"));  
+            con.setNf_valorimposto(request.getParameter("nf_valorimpostoField"));    
+            con.inserirDados();             
+            con.setConsulta();  
+            ResultSet temp = con.getResultado();  
+            temp.next();  
+            if(request.getParameter("nf_codigoField").equals(temp.getString("nf_codigo")))  
+            response.sendRedirect("http://localhost:8084/sistema_loja_matutino/notafiscal.jsp?status=Registro já existente");  
+            do{  
+            %>  
+            <tr>  
                <td width=50>  
                    <%out.print(temp.getString("nf_codigo"));%>  
                </td>  
@@ -43,12 +43,12 @@
                <td width=50>  
                    <%out.print(temp.getString("nf_valorimposto"));%>  
                </td>
-           </tr>  
-           <%}while (temp.next());       
-       }catch (Exception e) {  
+            </tr>  
+            <%}while (temp.next());       
+        }catch (Exception e) {  
            e.printStackTrace();  
-       }      
-       %>  
+        }      
+        %>  
    </table>  
    <p></p>  
    <p><input type="submit" name="Submit" value="voltar"></p>    

@@ -10,9 +10,9 @@
 <form name="form1" method="post" action="contareceber.jsp">   
 <jsp:setProperty name="con" property="cr_codigo" value='<%=Integer.parseInt(request.getParameter("cr_codigoField"))%>'/>  
 <jsp:setProperty name="con" property="cr_valorconta" value='<%=request.getParameter("cr_valorcontaField")%>'/>  
-<jsp:setProperty name="con" property="cr_datavencimento" value='<%=request.getParameter("cr_datavencimentoField"))%>'/>  
+<jsp:setProperty name="con" property="cr_datavencimento" value='<%=request.getParameter("cr_datavencimentoField")%>'/>  
 <jsp:setProperty name="con" property="cr_datarecebimento" value='<%=request.getParameter("cr_datarecebimentoField")%>'/>  
-<jsp:setProperty name="con" property="nf_codigo" value='<%=request.getParameter("nf_codigoField")%>'/>  
+<jsp:setProperty name="con" property="nf_codigo" value='<%=Integer.parseInt(request.getParameter("nf_codigoField"))%>'/>  
 <jsp:setProperty name="con" property="cr_observacoes" value='<%=request.getParameter("cr_observacoesField")%>'/>  
 <p><strong>Tabela Conta Receber </strong></p>  
 <table border=1 cellspacing=0 cellpadding=0 >  
@@ -36,7 +36,7 @@
 							<%out.print(temp.getString("cr_codigo"));%>  
 						</td>  
 						<td width=50>  
-							<%out.print(temp.getString("cr_valorcr"));%>  
+							<%out.print(temp.getString("cr_valorconta"));%>  
 						</td>  
 						<td width=50>  
 							<%out.print(temp.getString("cr_datavencimento"));%> 

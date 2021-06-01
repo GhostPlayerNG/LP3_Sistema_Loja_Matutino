@@ -10,9 +10,9 @@
 <form name="form1" method="post" action="contapagar.jsp">   
 <jsp:setProperty name="con" property="cp_codigo" value='<%=Integer.parseInt(request.getParameter("cp_codigoField"))%>'/>  
 <jsp:setProperty name="con" property="cp_valorconta" value='<%=request.getParameter("cp_valorcontaField")%>'/>  
-<jsp:setProperty name="con" property="cp_datavencimento" value='<%=request.getParameter("cp_datavencimentoField"))%>'/>  
+<jsp:setProperty name="con" property="cp_datavencimento" value='<%=request.getParameter("cp_datavencimentoField")%>'/>  
 <jsp:setProperty name="con" property="cp_datapagamento" value='<%=request.getParameter("cp_datapagamentoField")%>'/>  
-<jsp:setProperty name="con" property="nf_codigo" value='<%=request.getParameter("nf_codigoField")%>'/>  
+<jsp:setProperty name="con" property="nf_codigo" value='<%=Integer.parseInt(request.getParameter("nf_codigoField"))%>'/>   
 <jsp:setProperty name="con" property="cp_observacoes" value='<%=request.getParameter("cp_observacoesField")%>'/>  
 <p><strong>Tabela Conta Pagar </strong></p>  
 <table border=1 cellspacing=0 cellpadding=0 >  
@@ -36,7 +36,7 @@
 							<%out.print(temp.getString("cp_codigo"));%>  
 						</td>  
 						<td width=50>  
-							<%out.print(temp.getString("cp_valorcp"));%>  
+							<%out.print(temp.getString("cp_valorconta"));%>  
 						</td>  
 						<td width=50>  
 							<%out.print(temp.getString("cp_datavencimento"));%> 

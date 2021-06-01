@@ -11,12 +11,12 @@
 
 <jsp:setProperty name="con" property="itv_codigo" value='<%=Integer.parseInt(request.getParameter("itv_codigoField"))%>'/>  
 <jsp:setProperty name="con" property="ven_codigo" value='<%=Integer.parseInt(request.getParameter("ven_codigoField"))%>'/> 
-<jsp:setProperty name="con" property="ven_codigo" value='<%=Integer.parseInt(request.getParameter("pro_codigoField"))%>'/> 
-<jsp:setProperty name="con" property="ven_codigo" value='<%=Integer.parseInt(request.getParameter("tpp_codigoField"))%>'/>  
-<jsp:setProperty name="con" property="nf_codigo" value='<%=request.getParameter("nf_codigoField")%>'/>
-<jsp:setProperty name="con" property="tpg_codigo" value='<%=request.getParameter("tpg_codigoField")%>'/>  
-<jsp:setProperty name="con" property="fun_codigo" value='<%=request.getParameter("fun_codigoField")%>'/>    
-<jsp:setProperty name="con" property="itv_embalagem" value='<%=request.getParameter("itv_embalagemField"))%>'/>  
+<jsp:setProperty name="con" property="pro_codigo" value='<%=Integer.parseInt(request.getParameter("pro_codigoField"))%>'/> 
+<jsp:setProperty name="con" property="tpp_codigo" value='<%=Integer.parseInt(request.getParameter("tpp_codigoField"))%>'/>  
+<jsp:setProperty name="con" property="nf_codigo" value='<%=Integer.parseInt(request.getParameter("nf_codigoField"))%>'/>
+<jsp:setProperty name="con" property="tpg_codigo" value='<%=Integer.parseInt(request.getParameter("tpg_codigoField"))%>'/>  
+<jsp:setProperty name="con" property="fun_codigo" value='<%=Integer.parseInt(request.getParameter("fun_codigoField"))%>'/>  
+<jsp:setProperty name="con" property="itv_embalagem" value='<%=request.getParameter("itv_embalagemField")%>'/>  
 <jsp:setProperty name="con" property="itv_qtde" value='<%=request.getParameter("itv_qtdeField")%>'/>  
 <jsp:setProperty name="con" property="itv_valorun" value='<%=request.getParameter("itv_valorunField")%>'/>  
 <jsp:setProperty name="con" property="itv_desc" value='<%=request.getParameter("itv_descField")%>'/> 
@@ -52,16 +52,19 @@
 							<%out.print(temp.getString("ven_codigo"));%>  
 						</td>
 						<td width=50>  
+							<%out.print(temp.getString("pro_codigo"));%>  
+						</td>
+						<td width=50>  
 							<%out.print(temp.getString("tpp_codigo"));%>  
 						</td>
 						<td width=50>  
 							<%out.print(temp.getString("nf_codigo"));%>  
 						</td>
 						<td width=50>  
-							<%out.print(temp.getString("fun_codigo"));%>  
+							<%out.print(temp.getString("tpg_codigo"));%>  
 						</td>
 						<td width=50>  
-							<%out.print(temp.getString("tpg_codigo"));%>  
+							<%out.print(temp.getString("fun_codigo"));%>  
 						</td>
 						<td width=50>  
 							<%out.print(temp.getString("itv_embalagem"));%> 
