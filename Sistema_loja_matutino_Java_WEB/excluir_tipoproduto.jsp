@@ -11,12 +11,12 @@
 <p><strong>Tabela Tipo Produto </strong></p>  
 <table border=1 cellspacing=0 cellpadding=0 >  
 	<tr>  
-		<td width=50><strong>Código</strong></td>      
-		<td width=50><strong>Descrição</strong></td>      
+		<td width=50><strong>Codigo</strong></td>      
+		<td width=50><strong>Descricao</strong></td>      
 	</tr>   
 	<%      
 	try {  
-		con.settpp_codigo(Integer.parseInt(request.getParameter("tpp_codigoField")));  
+		con.setTpp_codigo(Integer.parseInt(request.getParameter("tpp_codigoField")));  
 		if (con.excluirDados())  
 		{  
 			con.setConsulta();  

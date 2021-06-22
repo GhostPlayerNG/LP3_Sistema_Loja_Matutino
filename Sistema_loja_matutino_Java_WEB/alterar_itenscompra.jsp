@@ -23,16 +23,16 @@
 <p><strong>Tabela Itens Compra</strong></p>  
 <table border=1 cellspacing=0 cellpadding=0 >  
 	<tr>  
-		<td width=50><strong>Código</strong></td>      
-		<td width=50><strong>Código Compras</strong></td> 
-		<td width=50><strong>Código Produtos</strong></td> 
-		<td width=50><strong>Código Tipo Produto</strong></td> 
-		<td width=50><strong>Código Nota Fiscal</strong></td> 
-		<td width=50><strong>Código Tipo Pagamento</strong></td>
-		<td width=50><strong>Código Fornecedor</strong></td> 
+		<td width=50><strong>Codigo</strong></td>      
+		<td width=50><strong>Codigo Compras</strong></td> 
+		<td width=50><strong>Codigo Produto</strong></td> 
+		<td width=50><strong>Codigo Tipo Produto</strong></td> 
+		<td width=50><strong>Codigo Nota Fiscal</strong></td> 
+		<td width=50><strong>Codigo Fornecedor</strong></td> 
+		<td width=50><strong>Codigo Tipo Pagamento</strong></td>
 		<td width=50><strong>Embalagem</strong></td>  
 		<td width=50><strong>Quantidade</strong></td>  
-		<td width=50><strong>Valor Unitário</strong></td> 
+		<td width=50><strong>Valor Unitario</strong></td> 
 		<td width=50><strong>Desconto</strong></td> 
 		<td width=50><strong>Valor Total</strong></td> 
     </tr>    

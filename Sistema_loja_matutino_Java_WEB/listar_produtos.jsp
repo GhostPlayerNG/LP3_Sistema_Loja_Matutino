@@ -11,9 +11,9 @@
 <p><strong>Tabela Produtos </strong></p>  
 <table border=1 cellspacing=0 cellpadding=0 >  
 	<tr>  
-		<td width=50><strong>Código</strong></td>      
+		<td width=50><strong>Codigo</strong></td>      
 		<td width=50><strong>Descrição</strong></td>
-		<td width=50><strong>Código Tipo Produto</strong></td>   
+		<td width=50><strong>Codigo Tipo Produto</strong></td>   
 		<td width=50><strong>Preço Custo</strong></td>
 		<td width=50><strong>Preço Venda</strong></td>
 		<td width=50><strong>Estoque</strong></td>

@@ -11,14 +11,14 @@
 <p><strong>Tabela Tipo Pagamento </strong></p>  
 <table border=1 cellspacing=0 cellpadding=0 >  
 	<tr>  
-		<td width=50><strong>Código</strong></td>      
-		<td width=50><strong>Descrição</strong></td>
+		<td width=50><strong>Codigo</strong></td>      
+		<td width=50><strong>Descricao</strong></td>
 		<td width=50><strong>Quantidade</strong></td>
 		<td width=50><strong>Ativo</strong></td>		
 	</tr>   
 	<%      
 	try {  
-		con.settpg_codigo(Integer.parseInt(request.getParameter("tpg_codigoField")));  
+		con.setTpg_codigo(Integer.parseInt(request.getParameter("tpg_codigoField")));  
 		if (con.excluirDados())  
 		{  
 			con.setConsulta();  
@@ -33,7 +33,7 @@
 					<%out.print(temp.getString("tpg_descricao"));%>  
 					</td>  
 					<td width=50>  
-					<%out.print(temp.getString("tpg_qtd"));%>  
+					<%out.print(temp.getString("tpg_qtde"));%>  
 					</td>  
 					<td width=50>  
 					<%out.print(temp.getString("tpg_ativo"));%>  

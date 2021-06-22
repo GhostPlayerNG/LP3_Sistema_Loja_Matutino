@@ -1,4 +1,4 @@
-<%@ page contentType="text/html" language="java" import="java.sql.*"%>  
+ <%@ page contentType="text/html" language="java" import="java.sql.*"%>  
  <jsp:useBean id="con" class="conexao_compras.Conexao_compras"/>  
  <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">  
  <html>  
@@ -21,18 +21,18 @@
 		</tr>   
 		<%      
 		try {  
-			con.setCom_codigo(Integer.parseInt(request.getParameter("com_codigoField")));
-			con.setTpg_codigo(Integer.parseInt(request.getParameter("tpg_codigoField")));
-			con.setFor_codigo(Integer.parseInt(request.getParameter("for_codigoField")));
-			con.setNf_codigo(Integer.parseInt(request.getParameter("nf_codigoField")));
-			con.setCom_datacompra(request.getParameter("com_datacompraField"));  
-			con.setCom_valortotal(request.getParameter("com_valortotalField"));  
-			con.setCom_observacoes(request.getParameter("com_observacoesField"));   
-		    con.inserirDados();             
-		    con.setConsulta();  
-		    ResultSet temp = con.getResultado();  
-		    temp.next();  
-		    if(request.getParameter("com_codigoField").equals(temp.getString("com_codigo")))  
+		   con.setCom_codigo(Integer.parseInt(request.getParameter("com_codigoField")));
+		   con.setTpg_codigo(Integer.parseInt(request.getParameter("tpg_codigoField")));
+		   con.setFor_codigo(Integer.parseInt(request.getParameter("for_codigoField")));
+		   con.setNf_codigo(Integer.parseInt(request.getParameter("nf_codigoField")));
+		   con.setCom_datacompra(request.getParameter("com_datacompraField"));  
+		   con.setCom_valortotal(request.getParameter("com_valortotalField"));  
+		   con.setCom_observacoes(request.getParameter("com_observacoesField"));   
+		   con.inserirDados();             
+		   con.setConsulta();  
+		   ResultSet temp = con.getResultado();  
+		   temp.next();  
+		   if(request.getParameter("com_codigoField").equals(temp.getString("com_codigo")))  
 			  response.sendRedirect("http://localhost:8084/sistema_loja_matutino/compras.jsp?status=Registro já existente");  
 		   do{  
 		   %>  

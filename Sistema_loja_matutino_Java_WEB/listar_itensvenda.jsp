@@ -1,5 +1,5 @@
 <%@ page contentType="text/html" language="java" import="java.sql.*"%>  
-<jsp:useBean id="con" class="conexao_itensvendas.Conexao_itensvendas"/>    
+<jsp:useBean id="con" class="conexao_itensvenda.Conexao_itensvenda"/>    
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">  
 <html>  
 <head>  
@@ -7,17 +7,17 @@
 <meta http-equiv="Content-Type" content="text/html; charset=iso--">  
 </head>  
 <body>  
-<form name="form" method="post" action="itensvendas.jsp">  
+<form name="form" method="post" action="itensvenda.jsp">  
 <p><strong>Tabela Itens Vendas </strong></p>  
 <table border=1 cellspacing=0 cellpadding=0 >  
 	<tr>  
-		<td width=50><strong>Código</strong></td>
-		<td width=50><strong>Código Vendas</strong></td>
-		<td width=50><strong>Código Produto</strong></td>
-		<td width=50><strong>Código Tipo Produto</strong></td>          
-		<td width=50><strong>Código Nota Fiscal</strong></td>  
-		<td width=50><strong>Código Tipo Pagamento</strong></td> 		
-		<td width=50><strong>Código Funcionario</strong></td>  
+		<td width=50><strong>Codigo</strong></td>
+		<td width=50><strong>Codigo Vendas</strong></td>
+		<td width=50><strong>Codigo Produto</strong></td>
+		<td width=50><strong>Codigo Tipo Produto</strong></td>          
+		<td width=50><strong>Codigo Nota Fiscal</strong></td>  
+		<td width=50><strong>Codigo Tipo Pagamento</strong></td> 		
+		<td width=50><strong>Codigo Funcionario</strong></td>  
 		<td width=50><strong>Embalagem</strong></td>
 		<td width=50><strong>Quantidade</strong></td>
 		<td width=50><strong>Valor Unitario</strong></td>

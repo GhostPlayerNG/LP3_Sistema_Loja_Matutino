@@ -9,7 +9,7 @@
 <body>  
 <form method="get">  
 	<%  
-	con.setNome(Integer.parseInt(request.getParameter("nf_codigoField")));  
+	con.setNf_codigo(Integer.parseInt(request.getParameter("nf_codigoField")));  
 	boolean testa = con.consultarDados();           
 	if (testa)  {           
 		ResultSet temp = con.getResultado();  
@@ -19,7 +19,7 @@
 		"&nf_taxaimpostonf="+temp.getString("nf_taxaimpostonf")+
 		"&nf_valorimposto="+temp.getString("nf_valorimposto"));  
 	}else{  
-        response.sendRedirect("http://localhost:8084/sistema_loja_matutino/notafiscal.jsp?status=Registro nÃ£o encontrado");  
+        response.sendRedirect("http://localhost:8084/sistema_loja_matutino/notafiscal.jsp?status=Registro não encontrado");  
 	}            
 	%>  
 </form>  

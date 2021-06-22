@@ -11,9 +11,9 @@
 <p><strong>Tabela Nota Fiscal </strong></p>  
 <table border=1 cellspacing=0 cellpadding=0 >  
 	<tr>  
-		<td width=50><strong>Código</strong></td>      
+		<td width=50><strong>Codigo</strong></td>      
 		<td width=50><strong>Valor</strong></td>      
-		<td width=50><strong>Taxa</strong></td>  
+		<td width=50><strong>Taxa Imposto</strong></td>  
 		<td width=50><strong>Valor Imposto</strong></td> 
     </tr>    
 		<%      
@@ -33,7 +33,7 @@
 					<%out.print(temp.getString("nf_taxaimpostonf"));%> 
 				</td>	
 				<td width=50>  
-					<%out.print(temp.getString("nf_valorimposto)"));%>  
+					<%out.print(temp.getString("nf_valorimposto"));%>  
 				</td>
 			</tr>  
 			<%

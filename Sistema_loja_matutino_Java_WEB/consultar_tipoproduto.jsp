@@ -9,7 +9,7 @@
 <body>  
 <form method="get">  
 	<%  
-	con.setNome(Integer.parseInt(request.getParameter("tpp_codigoField")));  
+	con.setTpp_codigo(Integer.parseInt(request.getParameter("tpp_codigoField")));  
 	boolean testa = con.consultarDados();           
 	if (testa)  {           
 		ResultSet temp = con.getResultado();  

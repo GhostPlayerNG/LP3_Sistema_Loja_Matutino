@@ -1,4 +1,4 @@
-<%@ page contentType="text/html" language="java" import="java.sql.*"%>  
+ <%@ page contentType="text/html" language="java" import="java.sql.*"%>  
  <jsp:useBean id="con" class="conexao_vendas.Conexao_vendas"/>  
  <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">  
  <html>  
@@ -21,21 +21,21 @@
 		</tr>   
 		<%      
 		try {  
-			con.setVen_codigo(Integer.parseInt(request.getParameter("ven_codigoField")));
-			con.setFun_codigo(Integer.parseInt(request.getParameter("fun_codigoField")));
-			con.setTpg_codigo(Integer.parseInt(request.getParameter("tpg_codigoField")));
-			con.setNf_codigo(Integer.parseInt(request.getParameter("nf_codigoField")));
-			con.setVen_datavenda(request.getParameter("ven_datavendaField"));  
-			con.setVen_valortotal(request.getParameter("ven_valortotalField"));  
-			con.setVen_observacoes(request.getParameter("ven_observacoesField"));   
-		  	con.inserirDados();             
-		    con.setConsulta();  
-		    ResultSet temp = con.getResultado();  
-		    temp.next();  
-		    if(request.getParameter("ven_codigoField").equals(temp.getString("ven_codigo")))  
+		   con.setVen_codigo(Integer.parseInt(request.getParameter("ven_codigoField")));
+		   con.setFun_codigo(Integer.parseInt(request.getParameter("fun_codigoField")));
+		   con.setTpg_codigo(Integer.parseInt(request.getParameter("tpg_codigoField")));
+		   con.setNf_codigo(Integer.parseInt(request.getParameter("nf_codigoField")));
+		   con.setVen_datavenda(request.getParameter("ven_datavendaField"));  
+		   con.setVen_valortotal(request.getParameter("ven_valortotalField"));  
+		   con.setVen_observacoes(request.getParameter("ven_observacoesField"));   
+		   con.inserirDados();             
+		   con.setConsulta();  
+		   ResultSet temp = con.getResultado();  
+		   temp.next();  
+		   if(request.getParameter("ven_codigoField").equals(temp.getString("ven_codigo")))  
 			  response.sendRedirect("http://localhost:8084/sistema_loja_matutino/vendas.jsp?status=Registro já existente");  
-		    do{  
-		    %>  
+		   do{  
+		   %>  
 			<tr>  
 				<td width=50>  
 					<%out.print(temp.getString("ven_codigo"));%>  

@@ -11,7 +11,7 @@
 <p><strong>Tabela Funcionario </strong></p>  
 <table border=1 cellspacing=0 cellpadding=0 >  
 	<tr>  
-		<td width=50><strong>Código</strong></td>      
+		<td width=50><strong>Codigo</strong></td>      
 		<td width=50><strong>Nome</strong></td>      
 		<td width=50><strong>Endereço</strong></td>
 		<td width=50><strong>Numero</strong></td>

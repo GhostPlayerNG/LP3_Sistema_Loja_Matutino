@@ -9,13 +9,13 @@
 <body>  
 <form method="get">  
 	<%  
-	con.setNome(Integer.parseInt(request.getParameter("ven_codigoField")));  
+	con.setVen_codigo(Integer.parseInt(request.getParameter("ven_codigoField")));    
 	boolean testa = con.consultarDados();           
 	if (testa)  {           
 		ResultSet temp = con.getResultado();  
 		response.sendRedirect("http://localhost:8084/sistema_loja_matutino/vendas.jsp?status=Consulta efetuada com sucesso&ven_codigo="+  
 		temp.getString("ven_codigo")+
-		"&fun_="+temp.getString("fun_codigo")+
+		"&fun_codigo="+temp.getString("fun_codigo")+
 		"&tpg_codigo="+temp.getString("tpg_codigo")+
 		"&nf_codigo="+temp.getString("nf_codigo")+
 		"&ven_datavenda="+temp.getString("ven_datavenda")+

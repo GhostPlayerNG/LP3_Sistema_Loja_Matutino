@@ -11,7 +11,7 @@
 <p><strong>Tabela Nota Fiscal </strong></p>  
 <table border=1 cellspacing=0 cellpadding=0 >  
 	<tr>  
-		<td width=50><strong>CÃ³digo</strong></td>      
+		<td width=50><strong>Código</strong></td>      
 		<td width=50><strong>Valor</strong></td>      
 		<td width=50><strong>Taxa</strong></td>  
 		<td width=50><strong>Valor Imposto</strong></td> 
@@ -42,7 +42,7 @@
           <%}  
        }  
        else{  
-          response.sendRedirect("http://localhost:8084/sistema_loja_matutino/notafiscal.jsp?status=Registro nÃ£o encontrado");  
+          response.sendRedirect("http://localhost:8084/sistema_loja_matutino/notafiscal.jsp?status=Registro não encontrado");  
        }     
     }catch (Exception e) {  
        e.printStackTrace();  

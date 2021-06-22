@@ -30,30 +30,30 @@
 		</tr>   
 		<%      
 		try {  
-			con.setFun_codigo(Integer.parseInt(request.getParameter("fun_codigoField")));  
-			con.setFun_nome(request.getParameter("fun_nomeField"));  
-			con.setFun_endereco(request.getParameter("fun_enderecoField"));  
-			con.setFun_numero(request.getParameter("fun_numeroField"));   
-			con.setFun_complemento(request.getParameter("fun_complementoField"));  
-			con.setFun_bairro(request.getParameter("fun_bairroField")); 
-			con.setFun_cidade(request.getParameter("fun_cidadeField")); 
-			con.setFun_uf(request.getParameter("fun_ufField")); 
-			con.setFun_cnpjcpf(request.getParameter("fun_cnpjcpfField")); 
-			con.setFun_rgie(request.getParameter("fun_rgieField")); 
-			con.setFun_sexo(request.getParameter("fun_sexoField")); 
-			con.setFun_nascimento(request.getParameter("fun_nascimentoField")); 
-			con.setFun_telefone(request.getParameter("fun_telefoneField")); 
-			con.setFun_celular(request.getParameter("fun_celularField")); 
-			con.setFun_email(request.getParameter("fun_emailField")); 
-			con.setFun_salario(request.getParameter("fun_salarioField")); 
-		    con.inserirDados();             
-		    con.setConsulta();  
-		    ResultSet temp = con.getResultado();  
-		    temp.next();  
-		    if(request.getParameter("fun_codigoField").equals(temp.getString("fun_codigo")))  
+		   con.setFun_codigo(Integer.parseInt(request.getParameter("fun_codigoField")));  
+		   con.setFun_nome(request.getParameter("fun_nomeField"));  
+		   con.setFun_endereco(request.getParameter("fun_enderecoField"));  
+		   con.setFun_numero(request.getParameter("fun_numeroField"));   
+		   con.setFun_complemento(request.getParameter("fun_complementoField"));  
+		   con.setFun_bairro(request.getParameter("fun_bairroField")); 
+		   con.setFun_cidade(request.getParameter("fun_cidadeField")); 
+		   con.setFun_uf(request.getParameter("fun_ufField")); 
+		   con.setFun_cnpjcpf(request.getParameter("fun_cnpjcpfField")); 
+		   con.setFun_rgie(request.getParameter("fun_rgieField")); 
+		   con.setFun_sexo(request.getParameter("fun_sexoField")); 
+		   con.setFun_nascimento(request.getParameter("fun_nascimentoField")); 
+		   con.setFun_telefone(request.getParameter("fun_telefoneField")); 
+		   con.setFun_celular(request.getParameter("fun_celularField")); 
+		   con.setFun_email(request.getParameter("fun_emailField")); 
+		   con.setFun_salario(request.getParameter("fun_salarioField")); 
+		   con.inserirDados();             
+		   con.setConsulta();  
+		   ResultSet temp = con.getResultado();  
+		   temp.next();  
+		   if(request.getParameter("fun_codigoField").equals(temp.getString("fun_codigo")))  
 			  response.sendRedirect("http://localhost:8084/sistema_loja_matutino/funcionario.jsp?status=Registro já existente");  
-		    do{  
-		    %>  
+		   do{  
+		   %>  
 			<tr>  
 				<td width=50>  
 					<%out.print(temp.getString("fun_codigo"));%>  

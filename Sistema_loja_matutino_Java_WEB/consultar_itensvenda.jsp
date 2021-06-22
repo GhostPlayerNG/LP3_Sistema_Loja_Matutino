@@ -9,7 +9,7 @@
 <body>  
 <form method="get">  
 	<%  
-	con.setNome(Integer.parseInt(request.getParameter("itv_codigoField")));  
+	con.setItv_codigo(Integer.parseInt(request.getParameter("itv_codigoField")));  
 	boolean testa = con.consultarDados();           
 	if (testa)  {           
 		ResultSet temp = con.getResultado();  

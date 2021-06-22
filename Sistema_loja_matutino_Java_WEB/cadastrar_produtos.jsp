@@ -11,9 +11,9 @@
 	<p><strong>Tabela Produtos </strong></p>  
 	<table border=1 cellspacing=0 cellpadding=0 >  
 		<tr>  
-			<td width=50><strong>Código</strong></td>      
+			<td width=50><strong>Codigo</strong></td>      
 			<td width=50><strong>Descricao</strong></td>     
-			<td width=50><strong>Código Tipo Produto</strong></td>     
+			<td width=50><strong>Codigo Tipo Produto</strong></td>     
 			<td width=50><strong>Preço Custo</strong></td>     
 			<td width=50><strong>Preço Venda</strong></td>     
 			<td width=50><strong>Estoque</strong></td>     
@@ -22,22 +22,22 @@
 		</tr>   
 		<%      
 		try {  
-			con.setPro_codigo(Integer.parseInt(request.getParameter("pro_codigoField")));  
-		    con.setPro_descricao(request.getParameter("pro_descricaoField")); 
-		    con.setTpp_codigo(Integer.parseInt(request.getParameter("tpp_codigoField")));
-			con.setPro_precocusto(request.getParameter("pro_precocustoField"));
-		  	con.setPro_precovenda(request.getParameter("pro_precovendaField"));
-		    con.setPro_estoque(request.getParameter("pro_estoqueField"));
-		    con.setPro_embalagem(request.getParameter("pro_embalagemField"));
-		    con.setPro_ipi(request.getParameter("pro_ipiField"));
-		    con.inserirDados();             
-		    con.setConsulta();  
-		    ResultSet temp = con.getResultado();  
-		    temp.next();  
-		    if(request.getParameter("pro_codigoField").equals(temp.getString("pro_codigo")))  
-			  response.sendRedirect("http://localhost:8084/sistema_loja_matutino/produtos.jsp?status=Registro já 	existente");  
-		    do{  
-		    %>  
+		   con.setPro_codigo(Integer.parseInt(request.getParameter("pro_codigoField")));  
+		   con.setPro_descricao(request.getParameter("pro_descricaoField")); 
+		   con.setTpp_codigo(Integer.parseInt(request.getParameter("tpp_codigoField")));
+		   con.setPro_precocusto(request.getParameter("pro_precocustoField"));
+		   con.setPro_precovenda(request.getParameter("pro_precovendaField"));
+		   con.setPro_estoque(request.getParameter("pro_estoqueField"));
+		   con.setPro_embalagem(request.getParameter("pro_embalagemField"));
+		   con.setPro_ipi(request.getParameter("pro_ipiField"));
+		   con.inserirDados();             
+		   con.setConsulta();  
+		   ResultSet temp = con.getResultado();  
+		   temp.next();  
+		   if(request.getParameter("pro_codigoField").equals(temp.getString("pro_codigo")))  
+			  response.sendRedirect("http://localhost:8084/sistema_loja_matutino/produtos.jsp?status=Registro já existente");  
+		   do{  
+		   %>  
 			<tr>  
 				<td width=50>  
 					<%out.print(temp.getString("pro_codigo"));%>  

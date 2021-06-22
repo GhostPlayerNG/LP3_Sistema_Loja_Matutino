@@ -27,27 +27,27 @@
 		</tr>   
 		<%      
 		try {  
-			con.setFor_codigo(Integer.parseInt(request.getParameter("for_codigoField")));  
-			con.setFor_nome(request.getParameter("for_nomeField"));  
-			con.setFor_endereco(request.getParameter("for_enderecoField"));  
-			con.setFor_numero(request.getParameter("for_numeroField"));   
-			con.setFor_bairro(request.getParameter("for_bairroField")); 
-			con.setFor_cidade(request.getParameter("for_cidadeField")); 
-			con.setFor_uf(request.getParameter("for_ufField")); 
-			con.setFor_cnpjcpf(request.getParameter("for_cnpjcpfField")); 
-			con.setFor_rgie(request.getParameter("for_rgieField")); 
-			con.setFor_telefone(request.getParameter("for_telefoneField")); 
-			con.setFor_fax(request.getParameter("for_faxField")); 
-			con.setFor_celular(request.getParameter("for_celularField")); 
-			con.setFor_email(request.getParameter("for_emailField")); 
-		    con.inserirDados();             
-		    con.setConsulta();  
-		    ResultSet temp = con.getResultado();  
-		    temp.next();  
-		    if(request.getParameter("for_codigoField").equals(temp.getString("for_codigo")))  
+		   con.setFor_codigo(Integer.parseInt(request.getParameter("for_codigoField")));  
+		   con.setFor_nome(request.getParameter("for_nomeField"));  
+		   con.setFor_endereco(request.getParameter("for_enderecoField"));  
+		   con.setFor_numero(request.getParameter("for_numeroField"));   
+		   con.setFor_bairro(request.getParameter("for_bairroField")); 
+		   con.setFor_cidade(request.getParameter("for_cidadeField")); 
+		   con.setFor_uf(request.getParameter("for_ufField")); 
+		   con.setFor_cnpjcpf(request.getParameter("for_cnpjcpfField")); 
+		   con.setFor_rgie(request.getParameter("for_rgieField")); 
+		   con.setFor_telefone(request.getParameter("for_telefoneField")); 
+		   con.setFor_fax(request.getParameter("for_faxField")); 
+		   con.setFor_celular(request.getParameter("for_celularField")); 
+		   con.setFor_email(request.getParameter("for_emailField")); 
+		   con.inserirDados();             
+		   con.setConsulta();  
+		   ResultSet temp = con.getResultado();  
+		   temp.next();  
+		   if(request.getParameter("for_codigoField").equals(temp.getString("for_codigo")))  
 			  response.sendRedirect("http://localhost:8084/sistema_loja_matutino/fornecedor.jsp?status=Registro já existente");  
-		    do{  
-		    %>  
+		   do{  
+		   %>  
 			<tr>  
 				<td width=50>  
 					<%out.print(temp.getString("for_codigo"));%>  

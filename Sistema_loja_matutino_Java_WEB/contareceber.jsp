@@ -1,4 +1,4 @@
-<%@ page contentType="text/html"%>  
+    <%@ page contentType="text/html"%>  
     <!DOCTYPE HTML PUBLIC "-//WC//DTD HTML . Transitional//EN" "http://www.w.org/TR/html/loose.dtd">   
     <html>  
     <head> <center> 
@@ -108,6 +108,7 @@
 			<td colspan="3">&nbsp;</td>
 		</tr>
 	</table>
+	<script src="menu.js"></script>
 	<form name="cadastro" method="get">       
 		<table width="" border="">  
 			<tr>  

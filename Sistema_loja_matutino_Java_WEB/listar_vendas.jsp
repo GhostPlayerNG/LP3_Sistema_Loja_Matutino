@@ -11,10 +11,10 @@
 <p><strong>Tabela Vendas </strong></p>  
 <table border=1 cellspacing=0 cellpadding=0 >  
 	<tr>  
-		<td width=50><strong>Código</strong></td>           
-		<td width=50><strong>Código Funcionario</strong></td>
-		<td width=50><strong>Código Tipo Pagamento</strong></td> 
-		<td width=50><strong>Código Nota Fiscal</strong></td>      
+		<td width=50><strong>Codigo</strong></td>           
+		<td width=50><strong>Codigo Funcionario</strong></td>
+		<td width=50><strong>Codigo Tipo Pagamento</strong></td> 
+		<td width=50><strong>Codigo Nota Fiscal</strong></td>      
 		<td width=50><strong>Data Venda</strong></td>
 		<td width=50><strong>Valor Total</strong></td>
 		<td width=50><strong>Obervações</strong></td>

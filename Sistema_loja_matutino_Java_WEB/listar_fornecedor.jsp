@@ -1,17 +1,17 @@
 <%@ page contentType="text/html" language="java" import="java.sql.*"%>  
-<jsp:useBean id="con" class="conexao_tipoproduto.Conexao_tipoproduto"/>    
+<jsp:useBean id="con" class="conexao_fornecedor.Conexao_fornecedor"/>    
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">  
 <html>  
 <head>  
-<title>Listar Tipo Produto</title>  
+<title>Listar Fornecedor</title>  
 <meta http-equiv="Content-Type" content="text/html; charset=iso--">  
 </head>  
 <body>  
-<form name="form" method="post" action="tipoproduto.jsp">  
-<p><strong>Tabela Tipo Produto </strong></p>  
+<form name="form" method="post" action="fornecedor.jsp">  
+<p><strong>Tabela Fornecedor </strong></p>  
 <table border=1 cellspacing=0 cellpadding=0 >  
 	<tr>  
-		<td width=50><strong>Código</strong></td>      
+		<td width=50><strong>Codigo</strong></td>      
 		<td width=50><strong>Nome</strong></td>      
 		<td width=50><strong>Endereço</strong></td>
 		<td width=50><strong>Numero</strong></td>

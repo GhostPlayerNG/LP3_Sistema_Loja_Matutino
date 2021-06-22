@@ -22,7 +22,7 @@
 	</tr>   
 	<%      
 	try {  
-		con.setpro_codigo(Integer.parseInt(request.getParameter("pro_codigoField")));  
+		con.setPro_codigo(Integer.parseInt(request.getParameter("pro_codigoField")));  
 		if (con.excluirDados())  
 		{  
 			con.setConsulta();  

@@ -11,12 +11,12 @@
 <p><strong>Tabela Conta Receber </strong></p>  
 <table border=1 cellspacing=0 cellpadding=0 >  
 	<tr>  
-		<td width=50><strong>Código</strong></td>      
+		<td width=50><strong>Codigo</strong></td>      
 		<td width=50><strong>Valor Conta</strong></td>      
 		<td width=50><strong>Data Vencimento</strong></td>  
 		<td width=50><strong>Data Recebimento</strong></td> 
 		<td width=50><strong>Codigo Nota Fiscal</strong></td> 
-		<td width=50><strong>Observações</strong></td> 
+		<td width=50><strong>Observacoes</strong></td> 
     </tr>    
 	<%      
 		try {  

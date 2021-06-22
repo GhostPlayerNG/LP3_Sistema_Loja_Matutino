@@ -16,16 +16,16 @@
 		</tr>   
 		<%      
 		try {  
-			con.setTpp_codigo(Integer.parseInt(request.getParameter("tpp_codigoField")));  
-			con.setTpp_descricao(request.getParameter("tpp_descricaoField"));   
-		    con.inserirDados();             
-		    con.setConsulta();  
-		    ResultSet temp = con.getResultado();  
-		    temp.next();  
-		    if(request.getParameter("tpp_codigoField").equals(temp.getString("tpp_codigo")))  
+		   con.setTpp_codigo(Integer.parseInt(request.getParameter("tpp_codigoField")));  
+		   con.setTpp_descricao(request.getParameter("tpp_descricaoField"));   
+		   con.inserirDados();             
+		   con.setConsulta();  
+		   ResultSet temp = con.getResultado();  
+		   temp.next();  
+		   if(request.getParameter("tpp_codigoField").equals(temp.getString("tpp_codigo")))  
 			  response.sendRedirect("http://localhost:8084/sistema_loja_matutino/tipoproduto.jsp?status=Registro já existente");  
-		    do{  
-		    %>  
+		   do{  
+		   %>  
 			<tr>  
 				<td width=50>  
 					<%out.print(temp.getString("tpp_codigo"));%>  
